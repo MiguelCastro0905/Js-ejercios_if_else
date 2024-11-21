@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Almacen de cadena ventas</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <h1>Calcular si se hace descuento</h1>
+      <button onclick="descuento()">calcular descuento</button>
+      <p id="resultado"></p>
+      
+      <script>
+
+            function descuento(){
+                  const precio = prompt("Ingrese el precio del articulo")
+                  const precio2 = prompt("Ingrese el precio del articulo 2")
+                  const precio3 = prompt("Ingrese el precio del articulo 3")
+                  const precio4 = prompt("Ingrese el precio del articulo 4")
+                  const precio5 = prompt("Ingrese el precio del articulo 5")
+                  
+                  const resultado = parseFloat(precio) + parseFloat(precio2) + parseFloat(precio3) + parseFloat(precio4) + parseFloat(precio5);
+                  const resultado2 = parseFloat(resultado) * 30 / 100;
+                  const resultado3 = parseFloat(resultado) - parseFloat (resultado2);
+
+                  if (resultado >= 3000000){
+                        document.getElementById("resultado").innerText = ` El precio total es de ${resultado} y con el descuento del 30% es de : ${resultado3} `;
+
+                  }else if (resultado < 3000000){
+                        document.getElementById("resultado").innerText = `El precio total es de ${resultado}`;
+                  }
+                       
+                
+            }
+      </script>
+</body>
+</html>
+

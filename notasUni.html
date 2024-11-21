@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Aprobo o Reprobo</title>
+</head>
+<body>
+      <h1>Calcular si el alumno aprobo</h1>
+      <button onclick="Calcular()">Calcular si paso o no</button>
+      <p id="resultado"></p>
+
+            <script>
+            function Calcular (){
+                  const asig1 = prompt("ingrese la nota de ciencias")
+                  const asig2 = prompt("ingrese la nota de matematicas")
+                  const asig3 = prompt ("ingrese la nota de calculo")
+                  const asig4 = prompt("ingrese la nota de derechos")
+                  const asig5 = prompt("ingrese la nota de investigacion")
+                  const asig6 = prompt ("ingrse la nota de trigonometria")
+                  const asig7 = prompt("ingrese la nota de emprendimiento ")
+                  const asig8 = prompt ("ingrese la nota de geometria")
+
+                  const formula = parseFloat(asig1) + parseFloat(asig2) + parseFloat(asig3) + parseFloat(asig4) + parseFloat(asig5) + parseFloat(asig6) + parseFloat (asig7) + parseFloat(asig8) ;
+                  const formula2 = parseFloat(formula) / 8;
+                  if(formula2 > 3){
+                        document.getElementById("resultado").innerText= `aprobo con un promedio de  ${formula2}`
+                  }else if (formula2 < 3){
+                        document.getElementById("resultado").innerText = `reprobo con un promedio de ${formula2}`
+                  }
+                        
+                  
+            
+            }
+
+
+
+
+
+
+
+      </script>
+      
+</body>
+</html>

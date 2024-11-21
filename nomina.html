@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>nomina</title>
+</head>
+<body>
+      <h1>Calcular una nomina</h1>
+      <button onclick="nomina()">Calcula tu nomina</button>
+      <p id="salario"></p>
+
+   
+      
+      <script>
+            
+                  
+            function nomina(){
+                  
+                  const documento = prompt("Ingrese su numero de documento: ")
+                  const nombres = prompt("Ingrese sus nombres y apellidos: ")
+                  const dias = prompt("Ingrese los días trabajdos: ")
+                  const horasD = prompt("Ingrese la cantidad de horas extras diurnas: ")
+                  const horasN = prompt("Ingrese la cantidad de horas extras nocturnas: ")
+                  const SubTrans = 162000
+                  const salarioMinimo = 1300000
+                  
+                  
+                  const salarioBase = parseFloat(salarioMinimo) / 30 * parseFloat(dias);
+                  const horasExtrasD = (salarioMinimo/ 240) * parseFloat(horasD) * 1.25;
+                  const horasExtrasN = (salarioMinimo/ 240) * parseFloat(horasN) * 1.75;
+                  const total = salarioBase + horasExtrasD + horasExtrasN + SubTrans;
+
+                  const salud = salarioMinimo * 0.04;
+                  const pension = salarioMinimo * 0.04;
+                  const totalPago = total - salud - pension;
+                  
+
+                  document.getElementById("salario").innerText = `nombre empleado es: ${nombres}
+                  El numero de documento es: ${documento}
+                  Salario minimo: 1.300.000
+                  Salario base : ${salarioBase}
+                  Dias trabajados: ${dias}
+                  Horas trabajas: ${horasD}  
+                  Valor de horas extra diurnas: ${horasExtrasD}
+                  Horas trabajas: ${horasN}   
+                  Valor de horas extra nocturnas: ${horasExtrasN}
+                  Valor devengado ${total}
+                  Valor salud: ${salud}   valor pension: ${pension}
+                  Total salario: ${totalPago}`
+                 
+      
+                  
+
+               
+
+                 
+
+             
+                       
+                
+            }
+            
+      </script>
+      
+</body>
+</html>

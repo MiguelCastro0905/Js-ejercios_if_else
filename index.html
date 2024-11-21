@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cual de los dos numeros es mayor</title>
+</head>
+<body>
+      <h1>mayor de dos numeros</h1>
+      <button onclick="mayordedosnumeros()">mayor de dos numeros</button>
+      <p id = "resultado"></p>
+
+
+      <script>
+            function mayordedosnumeros(){
+                  const numero1 = prompt("ingrese el primer numero:");
+                  const numero2 = prompt("ingrese segundo numero");
+
+                  const num1 = parseFloat(numero1);
+                  const num2 = parseFloat(numero2);
+
+                  if(num1 > num2){
+                        document.getElementById("resultado").innerText = `El numero mayor es: ${num1} `
+                  }else if(num1 < num2){
+                        document.getElementById("resultado").innerText = `El numero mayor es: ${num2}`
+                  }else {
+                        document.getElementById("resultado").innerText = `Ambos numeros son iguales`
+                  }
+            }
+
+
+
+
+
+
+
+
+
+
+
+      </script> 
+</body>
+</html>

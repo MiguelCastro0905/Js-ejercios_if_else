@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <h1>Calcular indice de masa corporal</h1>
+      <button onclick="imc()">calcular masa corporal</button>
+      <p id="masa"></p>
+      <!-- peso de una persona en kg por la estatura al cuadrado -->
+      <script>
+
+            function imc(){
+                  const peso = prompt("Ingrese su peso en kg :")
+                  const estatura = prompt("Ingrese su estatura en metros :")
+                 
+                  
+                  const resultado = parseFloat(peso) / (parseFloat(estatura) * parseFloat(estatura));
+                 
+
+                  if (resultado < 18.5){
+                        document.getElementById("masa").innerText = ` Su peso es: ${resultado}. El paciente tiene bajo peso a lo que se recomienda Comer con más frecuencia: come 5 o 6 comidas pequeñas en lugar de 2 o 3 grandes  `;
+
+                  }else if (resultado >= 18.5 && resultado < 24.9){
+                        document.getElementById("masa").innerText = `Su peso es: ${resultado}. El paciente tiene un peso normal a lo que se recomienda conservar una dieta estable y actividad fisica moderada`;
+
+                  }else if (resultado >= 25 && resultado < 29.9){
+                        document.getElementById("masa").innerText = `Su peso es: ${resultado}. El paciente tiene sobrepeso a lo que se recomienda realizar actividad fisica constante y una dieta balanceada baja en calorias`;
+
+                  }else if (resultado >= 30 && resultado < 34.9){
+                        document.getElementById("masa").innerText = `Su peso es: ${resultado}. El paciente tiene obesidad grado I a lo que se recomienda realizar actividad fisica de forma intensiva y una dieta balanceada sin carbohidratos y calorias`;
+                  }
+                       
+                
+            }
+      </script>
+      
+</body>
+</html>
